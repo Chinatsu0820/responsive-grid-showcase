@@ -1,4 +1,134 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { /* html=asterisk? */
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+
+/*-- MENU --*/
+.menu-container {
+    display: flex;
+    align-items: center;
+    background-color: pink;
+    gap: 1.5rem;
+}
+
+.menu-icon {
+    height: 7rem;
+    margin-right: auto;
+}
+
+/*-- HEADER --*/
+header {
+    padding: 2rem;
+    border: 0.5rem solid red;
+}
+
+/*-- HOME MAIN --*/
+.main-container {
+    border: 0.5rem solid blue;
+}
+
+.main-container-2 {
+    border: 0.5rem solid green;
+}
+
+/*-- PRODUCT --*/
+.product-grid {
+    display: grid;
+    gap: 3rem;
+    margin: 3rem auto;
+}
+
+.product {
+    padding: 1rem;
+    border: 0.3rem solid red;
+}
+
+#product-1 {
+    grid-area: item1;
+}
+
+#product-2 {
+    grid-area: item2;
+}
+
+#product-3 {
+    grid-area: item3;
+}
+
+#product-4 {
+    grid-area: item4;
+}
+
+#product-5 {
+    grid-area: item5;
+}
+
+#product-6 {
+    grid-area: item6;
+}
+
+.product-picture {
+    width: 15rem;
+}
+
+.product-text {
+    width: 15rem;
+}
+
+/*-- FOOTER --*/
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 3rem;
+    background-color: pink;
+    gap: 1.5rem;
+}
+
+/*-- Desktop --*/
+@media screen and (min-width: 1024px) { 
+    header, main {
+        width: 1024px; max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .product-grid {
+        grid-template-areas:
+        'item1 item1 item2 item3'
+        'item1 item1 item6 item6'
+        'item4 item5 item6 item6'
+    }
+}
+
+/*-- Tablet --*/
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+    .product-grid {
+        grid-template-areas:
+        'item1 item1 item2'
+        'item1 item1 item3'
+        'item4 item5 item6'
+    }
+ }
+
+/*-- Mobile --*/
+@media screen and (max-width: 599px) { 
+    .product-grid {
+        grid-template-areas:
+        'item1'
+        'item2'
+        'item3'
+        'item4'
+        'item5'
+        'item6'
+    }
 }
