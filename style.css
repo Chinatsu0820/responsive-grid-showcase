@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Caveat', cursive;
 }
 
 html { /* html=asterisk? */
@@ -14,10 +17,13 @@ body {
 
 
 /*-- MENU --*/
+nav {
+    background-color: rgb(122, 175, 255);
+}
+
 .menu-container {
     display: flex;
     align-items: center;
-    background-color: rgb(122, 175, 255);
     gap: 1.5rem;
 }
 
@@ -29,26 +35,107 @@ body {
 
 .menu-button {
     margin: 1rem;
+    text-decoration: none;
 }
 
-/*-- HEADER --*/
-header {
-    padding: 2rem;
-    border: 0.5rem solid red;
+.menu-button:hover {
+    text-decoration: underline;
 }
 
 /*-- HOME MAIN --*/
-.main-container {
-    border: 0.5rem solid blue;
+/*- SHOP NAME -*/
+.main-container-1 {
+    text-align: center;
+    margin-top: 5rem;
 }
 
-.main-container-2 {
-    border: 0.5rem solid green;
+.shopname {
+    font-size: 7rem;
 }
+
+.shopname-1 {
+    color: brown;
+}
+
+.shopname-2 {
+    color: orange;
+}
+
+.shopname-3 {
+    color: pink;
+}
+
+.shopname-sub {
+    font-size: 2rem;
+    color:rgba(19, 145, 159, 0.753)
+}
+
+.main-picture {
+    width: 50%;
+}
+
+/*- INTRODUCTION OF PRODCUT + ABOUTUS -*/
+.intro-name {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.intro-button {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.intro-button-a {
+    text-decoration: none;
+}
+
+.intro-button-a:hover {
+    text-decoration: underline;
+}
+
+/*- INTRODUCTION OF PRODUCT -*/
+.main-container-2 {
+    border-top: 0.5rem solid rgba(189, 238, 243, 0.479);
+    margin: 2rem 2rem 5rem 2rem;
+}
+
+.intro-product {
+    display: flex;
+    justify-content: space-around;
+}
+
+.intro-product-item {
+    width: 25%;
+}
+
+
+/*- INTRODUCTION OF ABOUTUS -*/
+.main-container-3 {
+    border-top: 0.5rem solid rgba(189, 238, 243, 0.479);
+    margin: 2rem 2rem 5rem 2rem;
+}
+
+.intro-aboutus {
+    margin: 2rem;
+    overflow: hidden; /* Ensure photos fit within the parent element and adjust its height accordingly.*/
+}
+
+.intro-aboutus-img {
+    width: 30%;
+    margin-left: 2rem;
+    float: right;
+}
+
+.intro-aboutus-text {
+    font-size: 2rem;
+}
+
 
 /*-- PRODUCT --*/
 .product-title {
-    margin: 2rem;
+    font-size: 4rem;
+    margin: 1rem;
 }
 
 .product-grid {
@@ -111,19 +198,37 @@ header {
 .footer-container {
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     padding: 3rem;
     background-color: rgb(122, 175, 255);
     gap: 1.5rem;
 }
 
-/*-- Desktop --*/
+.footer-shopname {
+    font-weight: bold;
+}
+
+.footer-buttons,.footer-shopinfo {
+    text-align: center;
+}
+
+.footer-button {
+    text-decoration: none;
+}
+
+.footer-img {
+    width: 20%;
+}
+
+/*---------------------- DESKTOP ----------------------*/
 @media screen and (min-width: 1024px) { 
-    header, main {
+    /* to avoid spreading to the side */
+    .menu-container,main,.product-page {
         width: 1024px; max-width: 100%;
         margin: 0 auto;
     }
 
+    /*-- PRODUCT --*/
     .product-grid {
         grid-template-areas:
         'item1 item1 item2 item3'
@@ -144,8 +249,10 @@ header {
     }
 }
 
-/*-- Tablet --*/
+/*----------------------  Tablet ----------------------*/
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
+
+    /*-- PRODUCT --*/
     .product-grid {
         grid-template-areas:
         'item1 item1 item2'
@@ -167,8 +274,10 @@ header {
 
  }
 
-/*-- Mobile --*/
+/*----------------------  Mobile ---------------------- */
 @media screen and (max-width: 599px) { 
+    
+    /*-- PRODUCT --*/
     .product-grid {
         grid-template-areas:
         'item1'
@@ -177,5 +286,12 @@ header {
         'item4'
         'item5'
         'item6'
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+        gap: 1.5rem;
     }
 }
