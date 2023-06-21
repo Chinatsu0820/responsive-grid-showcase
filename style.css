@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 * {
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Caveat', cursive;
 }
 
 html { /* html=asterisk? */
@@ -11,43 +13,180 @@ body {
     font-size: 1.6rem;
 }
 
-
-/*-- MENU --*/
-.menu-container {
-    display: flex;
-    align-items: center;
+/*-------------------- INDEX --------------------*/
+.grid-containerbox {
+    display: grid;
+    grid-template-columns: 14.5vw 70vw 14.5vw;
+    grid-template-rows: 14.5vh 150vh 14.5vh;
+    grid-template-areas: 
+    "header header header"
+    "  .     main     .  "
+    "footer footer footer";
+    row-gap: 1rem;
+}
+/*-----------HEADER-----------*/
+.grid-containerbox header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 14.5vw 70vw 14.5vw;
+    grid-template-areas: ". header-content .";
     background-color: rgb(122, 175, 255);
-    gap: 1.5rem;
+    
 }
 
-.menu-icon {
-    height: 7rem;
-    margin-right: auto;
-    margin-left: 1rem;
+.header-container {
+    grid-area: header-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.menu-button {
-    margin: 1rem;
+.grid-containerbox nav {
+    display: flex;
+    height: 20%;
 }
 
-/*-- HEADER 
-header {
-    padding: 2rem;
-    border: 0.5rem solid red;
-}
---*/
-/*-- HOME MAIN --*/
-.main-container {
-    border: 0.5rem solid blue;
+.nav-item {
+    margin-left: 10px;
+    width:100px;
+    text-decoration: none;
+    color: black;
 }
 
-.main-container-2 {
-    border: 0.5rem solid green;
+/*-----------MAIN-----------*/
+.grid-containerbox main {
+    grid-area: main;
+    text-align: center;
 }
 
-/*-- PRODUCT --*/
-.product-title {
+.first-content {
+    height: 40%;
+    margin-bottom: 7px;
+}
+
+.second-content {
+    border-top: 0.5rem solid rgba(189, 238, 243, 0.479);
+    height: 27%;
+    margin-bottom: 7px;
+}
+
+.third-content {
+    border-top: 0.5rem solid rgba(189, 238, 243, 0.479);
+    height: 35%;
+}
+
+/*- SHOP NAME -*/
+.main-container-1 {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.shopname {
+    font-size: 7rem;
+}
+
+.shopname-1 {
+    color: brown;
+}
+
+.shopname-2 {
+    color: orange;
+}
+
+.shopname-3 {
+    color: pink;
+}
+
+.shopname-sub {
+    font-size: 2rem;
+    color:rgba(19, 145, 159, 0.753)
+}
+
+.main-picture {
+    width: 500px;
+}
+
+/*- INTRODUCTION OF PRODCUT + ABOUTUS -*/
+.intro-name {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.intro-button {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.intro-button-a {
+    text-decoration: none;
+}
+
+.intro-button-a:hover {
+    text-decoration: underline;
+}
+
+/*- INTRODUCTION OF PRODUCT -*/
+.intro-product {
+    display: flex;
+    justify-content: space-around;
+}
+
+.intro-product-item {
+    width: 25%;
+}
+
+
+/*- INTRODUCTION OF ABOUTUS -*/
+.intro-aboutus {
     margin: 2rem;
+    overflow: hidden; /* Ensure photos fit within the parent element and adjust its height accordingly.*/
+}
+
+.intro-aboutus-img {
+    width: 30%;
+    margin-left: 2rem;
+    float: right;
+}
+
+.intro-aboutus-text {
+    font-size: 2rem;
+}
+
+/*-----------FOOTER-----------*/
+.grid-containerbox footer {
+    grid-area: footer;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    background-color: rgb(122, 175, 255);
+}
+
+.grid-containerbox .footer-item {
+    margin-left: 10px;
+}
+
+.footer-shopname {
+    font-weight: bold;
+}
+
+.footer-buttons,.footer-shopinfo {
+    text-align: center;
+}
+
+.footer-button {
+    text-decoration: none;
+}
+
+.footer-img {
+    width: 20%;
+}
+
+/*-------------------- PRODUCT --------------------*/
+.product-title {
+    font-size: 4rem;
+    margin: 1rem;
 }
 
 .product-grid {
@@ -105,65 +244,11 @@ header {
     font-size: 2rem;
 }
 
-
-/*-- FOOTER --*/
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    padding: 3rem;
-    background-color: rgb(122, 175, 255);
-    gap: 1.5rem;
-}
-
-.product-grid {
-    grid-template-areas:
-    'item1 item1 item2 item3'
-    'item1 item1 item6 item6'
-    'item4 item5 item6 item6'
-}
-s
-.product-name.name1,.product-name.name6 {
-    font-size: 6rem;
-}
-
-.product-price.price1,.product-price.price6 {
-    font-size: 4rem;
-}
-
-.product-explanation.ex1,.product-explanation.ex6 {
-    font-size: 2.4rem;
-}
-
-
-/*-- Tablet --*/
-@media only screen and (min-width: 600px) and (max-width: 1023px) {
-.product-grid {
-    grid-template-areas:
-    'item1 item1 item2'
-    'item1 item1 item3'
-    'item4 item5 item6'
-}
-
-.product-name.name1 {
-    font-size: 6rem;
-}
-
-.product-price.price1 {
-    font-size: 4rem;
-}
-
-.product-explanation.ex1 {
-    font-size: 2.4rem;
-}
-
-}
-
-/*----- PAGE1 -----*/
+/*-------------------- PAGE1 --------------------*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 24.3vw);
-    grid-template-rows: repeat(3,32vh);
+    grid-template-rows: 14.5vh repeat(3,32vh) 14.5vh;
     grid-template-areas: 
     "one one two three"
     "one one four four"
@@ -213,88 +298,9 @@ s
     height:70%;
 }
 
-/*---- Pages2 ----*/
-.grid-containerbox {
-    display: grid;
-    grid-template-columns: 14.5vw 70vw 14.5vw;
-    grid-template-rows: 14.5vh 67vh 14.5vh;
-    grid-template-areas: 
-    "header header header"
-    "  .     main     .  "
-    "footer footer footer";
-    row-gap: 1rem;
-}
+/*-------------------- PAGE2 --------------------*/
 
 
-.grid-containerbox header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 14.5vw 70vw 14.5vw;
-    grid-template-areas: ". header-content .";
-    background-color: lightgreen;
-    
-}
-
-.header-container {
-    grid-area: header-content;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.grid-containerbox .logo {
-    width: 120px;
-    height: 100px;
-    background-color: skyblue;
-}
-
-.grid-containerbox nav {
-    display: flex;
-    height: 20%;
-}
-
-.nav-item {
-    background-color: skyblue;
-    margin-left: 10px;
-    width:100px;
-}
-
-.grid-containerbox main {
-    grid-area: main;
-}
-
-.first-content {
-    height: 50%;
-    border: 1px solid black;
-    margin-bottom: 7px;
-}
-
-.second-content {
-    height: 24%;
-    border: 1px solid black;
-    margin-bottom: 7px;
-}
-
-.third-content {
-    height: 24%;
-    border: 1px solid black;
-}
-
-.grid-containerbox footer {
-    grid-area: footer;
-    display:flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 10px;
-    background-color: lightgreen;
-}
-
-.grid-containerbox .footer-item {
-    background-color: skyblue;
-    height:20%;
-    width:130px;
-    margin-left: 10px;
-}
 
 /*---- MEDIA QUERY ----*/
 
@@ -343,6 +349,7 @@ s
 
     .grid-containerbox {
         grid-template-columns: 99vw;
+        grid-template-rows: 14.5vh 150vh 19vh;
         grid-template-areas: 
         "header"
         "main"
@@ -364,7 +371,7 @@ s
     }
     
     .grid-containerbox .footer-item {
-        margin: 3px auto;
+        margin: 0px auto;
     }
 
     .nav-item {
@@ -373,14 +380,15 @@ s
 
     .header-container nav {
         flex-direction: column;
-        width: 120px;
-        height: 100px;
-        background-color: skyblue;
+        width: 80px;
+        height: 50px;
+        background-image: url('img/icon-menu.svg');
+        background-size: cover;
         padding-top:100px;
     }
 
     .header-container nav:hover .nav-item {
         display:block;
-        background-color: blueviolet;
+        background-color: rgba(122, 175, 255, 0.5);;
     }
 } 

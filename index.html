@@ -1,60 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- MENU -->
-    <nav>
-        <section class="menu-container">
-            <img class="menu-icon" src="img/icon-cake.png" alt="This is an icon of our shop">
-            <a class="menu-button" href="index.html">HOME</a>
-            <a class="menu-button" href="index.html">MENU</a>
-            <a class="menu-button" href="index.html">ABOUT US</a>
-            <a class="menu-button" href="index.html">CONTACT</a>
-        </section>
-    </nav>
+    <div class="grid-containerbox">
+        <header>
+            <div class="header-container">
+                <div class="logo"><img class="menu-icon" src="img/logo-menu.png" alt="This is an icon of our shop"></div>
+                <nav>
+                    <a class="nav-item menu1" href="index.html">HOME</a>
+                    <a class="nav-item menu2" href="pages/product.html">J-Product</a>
+                    <a class="nav-item menu3" href="pages/pages1.html">K-Product</a>
+                    <a class="nav-item menu4" href="pages/pages2.html">AboutUs</a>
+                </nav>
+            </div>
+        </header>
 
-    <!-- HEADER -->
-    <header>
-        <div class="header-text">This is header / Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Deleniti ipsam accusantium at voluptatum vel. Facilis iste sapiente, sint nobis 
-            omnis distinctio, commodi saepe doloribus dolorum repudiandae iusto, inventore 
-            placeat velit?</div>
-    </header>
+        <!-- HOME MAIN -->
+        <main>
+            <!-- SHOP NAME -->
+            <section class="main-item first-content">
+                <p class="shopname-sub">Korean & Japanese</p>
+                <h1 class="shopname">
+                    <span class="shopname-1">East </span>
+                    <span class="shopname-2">Meets </span>
+                    <span class="shopname-3">Sweet </span>
+                </h1>
+                <img class="main-picture" src="img/topsweets.jpg" alt="This is a picture of three colorful macarons.">
+            </section>
 
-    <!-- HOME MAIN -->
-    <main>
-        <div class="main-container">This is main / Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            Velit ea quaerat quo nisi pariatur, vel, repellendus magnam quam animi provident 
-            eaque fuga, facilis molestiae quibusdam ab perferendis ullam tenetur nam?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            Velit ea quaerat quo nisi pariatur, vel, repellendus magnam quam animi provident 
-            eaque fuga, facilis molestiae quibusdam ab perferendis ullam tenetur nam?</div>
+            <!-- INTRODUCTION OF PRODCUT -->
+            <section class="main-item second-content">
+                <h2 class="intro-name">Our Products</h2>
+                <div class="intro-product">
+                    <img class="intro-product-item" src="img/j-cohakuto.jpg"
+                        alt="This is a picture of a Japanese sweet named Kohakuto.">
+                    <img class="intro-product-item" src="img/j-cohakuto.jpg"
+                        alt="This is a picture of a Japanese sweet named Kohakuto.">
+                    <img class="intro-product-item" src="img/j-cohakuto.jpg"
+                        alt="This is a picture of a Japanese sweet named Kohakuto.">
+                </div>
+                <div class=intro-button>
+                    <a class=intro-button-a href="pages/product.html">MORE</a>
+                </div>
+            </section>
 
-        <div class="main-container-2">This is main 2 / Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Vel, laboriosam non unde quaerat iusto provident ipsa perferendis quibusdam 
-            aspernatur soluta saepe praesentium veniam dolorum aliquid labore tempore 
-            error pariatur. Maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Vel, laboriosam non unde quaerat iusto provident ipsa perferendis quibusdam 
-            aspernatur soluta saepe praesentium veniam dolorum aliquid labore tempore 
-            error pariatur. Maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Vel, laboriosam non unde quaerat iusto provident ipsa perferendis quibusdam 
-            aspernatur soluta saepe praesentium veniam dolorum aliquid labore tempore 
-            error pariatur. Maxime?</div>
-    </main>
+            <!-- INTRODUCTION OF ABOUTUS -->
+            <section class="main-item third-content">
+                <h2 class="intro-name">About Us</h2>
+                <div class="intro-aboutus">
+                    <img class="intro-aboutus-img" src="img/j-cohakuto.jpg" alt="This is a picture of our company member.">
+                    <p class="intro-aboutus-text">
+                        laboriosam non unde quaerat iusto provident ipsa perferendis quibusdam
+                        aspernatur soluta saepe praesentium veniam dolorum aliquid labore tempore
+                        error pariatur. Maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class=intro-button>
+                    <a class=intro-button-a href="pages/product.html">MORE</a>
+                </div>
+            </section>
+        </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <section class="footer-container">
-            <a class="footer-button" href="index.html">TEST</a>
-            <a class="footer-button" href="index.html">TEST</a>
-            <a class="footer-button" href="index.html">TEST</a>
-        </section>
-    </footer>
-    
+        <!-- FOOTER -->
+        <footer>
+            <p class="footer-shopname footer-item">East Meets Sweet</p>
+            <div class="footer-buttons footer-item">
+                <a class="footer-button" href="https://facebook.com">
+                    <img class="footer-img" src="img/icon-facebook.svg">
+                </a>
+                <a class="footer-button" href="https://instagram.com">
+                    <img class="footer-img" src="img/icon-insta.svg">
+                </a>
+                <a class="footer-button" href="https://twitter.com">
+                    <img class="footer-img" src="img/icon-twitter.svg">
+                </a>
+            </div>
+            <div class="footer-shopinfo footer-item">
+                <p>600-000-0000</p>
+                <p>info@eastmeetssweet.com</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
