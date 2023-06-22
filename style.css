@@ -18,7 +18,7 @@ body {
 .grid-structure {
     display: grid;
     grid-template-columns: 14.5vw 70vw 15.5vw;
-    grid-template-rows: 14.5vh auto 14.5vh;
+    grid-template-rows: 12vh auto 14.5vh;
     grid-template-areas: 
     "header header header"
     "  .     main     .  "
@@ -183,7 +183,35 @@ body {
 }
 
 /*-------------------------------------- PRODUCT --------------------------------------*/
+/*-------------------- Header --------------------*/
+/*---------------------- MENU ----------------------*/
+nav {
+    background-color: rgb(122, 175, 255);
+}
 
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu-icon {
+    height: 7rem;
+    margin-right: auto;
+    margin-left: 1rem;
+}
+
+.menu-button {
+    margin: 1rem;
+    text-decoration: none;
+}
+
+.menu-button:hover {
+    text-decoration: underline;
+}
+
+
+/*-------------------- Main --------------------*/
 .product-title {
     font-size: 4rem;
     margin: 1rem;
@@ -242,6 +270,15 @@ body {
 .product-price {
     margin-bottom: 1rem;
     font-size: 2rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: rgb(122, 175, 255);
+    gap: 1.5rem;
 }
 /*-------------------------------------- MEDIA QUERY 1 --------------------------------------*/
 /*---------------------- DESKTOP ----------------------*/
