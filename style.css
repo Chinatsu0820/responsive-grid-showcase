@@ -15,52 +15,35 @@ body {
     font-size: 1.6rem;
 }
 
-.grid-structure {
-    display: grid;
-    grid-template-columns: 14.5vw 70vw 15.5vw;
-    grid-template-rows: 12vh auto 14.5vh;
-    grid-template-areas: 
-    "header header header"
-    "  .     main     .  "
-    "footer footer footer";
-}
-
 /*-------------------------------------- INDEX --------------------------------------*/
 /*-------------------- Header --------------------*/
-.grid-structure header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 14.5vw 70vw 14.5vw;
-    grid-template-areas: ". header-content .";
+/*--- menu ---*/
+nav {
     background-color: rgb(122, 175, 255);
 }
 
-/*--- menu ---*/
-.header-container {
-    grid-area: header-content;
+.menu-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
 }
 
-.grid-structure nav {
-    display: flex;
-    height: 20%;
+.menu-icon {
+    height: 7rem;
+    margin-right: auto;
+    margin-left: 1rem;
 }
 
-.nav-item {
-    margin-left: 10px;
-    width:100px;
+.menu-button {
+    margin: 1rem;
     text-decoration: none;
-    color: black;
+}
+
+.menu-button:hover {
+    text-decoration: underline;
 }
 
 /*-------------------- Main --------------------*/
-.grid-structure main {
-    grid-area: main;
-    text-align: center;
-}
-
 /*-- SHOP NAME --*/
 .main-container-1 {
     text-align: center;
@@ -152,19 +135,14 @@ body {
 }
 
 /*-------------------- Footer --------------------*/
-.grid-structure footer {
-    grid-area: footer;
-    display:flex;
+.footer-container {
+    display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 10px;
+    align-items: center;
+    padding: 3rem;
     background-color: rgb(122, 175, 255);
+    gap: 1.5rem;
 }
-
-.grid-structure .footer-item {
-    margin-left: 10px;
-}
-
 
 .footer-shopname {
     font-weight: bold;
@@ -183,34 +161,6 @@ body {
 }
 
 /*-------------------------------------- PRODUCT --------------------------------------*/
-/*-------------------- Header --------------------*/
-/*---------------------- MENU ----------------------*/
-nav {
-    background-color: rgb(122, 175, 255);
-}
-
-.menu-container {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.menu-icon {
-    height: 7rem;
-    margin-right: auto;
-    margin-left: 1rem;
-}
-
-.menu-button {
-    margin: 1rem;
-    text-decoration: none;
-}
-
-.menu-button:hover {
-    text-decoration: underline;
-}
-
-
 /*-------------------- Main --------------------*/
 .product-title {
     font-size: 4rem;
@@ -272,21 +222,12 @@ nav {
     font-size: 2rem;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
-    background-color: rgb(122, 175, 255);
-    gap: 1.5rem;
-}
 /*-------------------------------------- MEDIA QUERY 1 --------------------------------------*/
 /*---------------------- DESKTOP ----------------------*/
 @media screen and (min-width: 1024px) {
-
     /* to avoid spreading to the side */
     .menu-container,
-    main,
+    .home-main,
     .product-page {
         width: 1024px;
         max-width: 100%;
@@ -362,49 +303,122 @@ nav {
         padding: 3rem;
         gap: 1.5rem;
     }
+
+    .hambuger-menu {
+        display: block;
+        height: 7rem;
+        width: 80px;
+        background-image: url('img/icon-menu.svg');
+        background-size: cover;
+    }
+
+    .menu-button {
+        display: none;
+        margin:0px;
+        background-color: rgba(122, 175, 255, 0.5);
+    }
+
+    .menu-button:nth-child(1) {
+        margin-top: 70px;
+    }
+
+    .hambuger-menu:hover .menu-button{
+        display: block;
+    }
 }
 
 /*-------------------------------------- K-PRODUCT --------------------------------------*/
-.k-main-container {
+/*--------Header-------*/
+.grid-structure {
     display: grid;
-    grid-template-columns: repeat(4, 24.3vw);
-    grid-template-rows: repeat(3, 32vh);
+    grid-template-columns: 18vw 64vw 18vw;
+    grid-template-rows: 7.77vh auto 10vh;
+    grid-template-areas: 
+    "header header header"
+    "  .     main     .  "
+    "footer footer footer";
+}
+
+.grid-structure header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 18vw 64vw 18vw;
+    grid-template-areas: ". header-content .";
+    background-color: rgb(122, 175, 255);
+}
+
+.header-container {
+    grid-area: header-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-structure nav {
+    display: flex;
+    height: 20%;
+}
+
+.nav-item {
+    width:100px;
+    text-decoration: none;
+    color: black;
+    text-align: right;
+    padding-right: 3px;
+}
+
+.nav-item:hover{
+ text-decoration: underline;
+}
+/*----main-----*/
+
+.k-main-container {
+    grid-area: main;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    grid-template-rows: 5vh repeat(3, 25vh);
     grid-template-areas:
+        "pagename pagename pagename pagename"
         "one one two three"
         "one one four four"
         "five six four four"
     ;
-    gap: 1rem;
-    margin: 0.3em;
+    margin: 1em 0em 3em 0.4em;
+    gap: 3rem;
+    
 }
 
 .grid-item {
     height: auto;
-    box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.1rem 0.1rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
     padding-bottom: 15px;
 }
-
 .grid-item:nth-child(1) {
-    grid-area: one;
+    grid-area: pagename;
 }
 
 .grid-item:nth-child(2) {
-    grid-area: two;
+    grid-area: one;
 }
 
 .grid-item:nth-child(3) {
-    grid-area: three;
+    grid-area: two;
 }
 
 .grid-item:nth-child(4) {
-    grid-area: four;
+    grid-area: three;
 }
 
 .grid-item:nth-child(5) {
-    grid-area: five;
+    grid-area: four;
 }
 
 .grid-item:nth-child(6) {
+    grid-area: five;
+}
+
+.grid-item:nth-child(7) {
     grid-area: six;
 }
 
@@ -419,9 +433,23 @@ nav {
     width: 70%;
     height: 70%;
 }
+/*----footer-----*/
+.grid-structure footer {
+    grid-area: footer;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    background-color: rgb(122, 175, 255);
+}
+
+.grid-structure .footer-item {
+    margin-left: 10px;
+}
 
 /*-------------------------------------- ABOUT US --------------------------------------*/
 .about-main {
+    grid-area: main;
     display: grid;
     grid-template-columns: 27% 46% 27%;
     grid-template-rows: 15vh 15vh 25vh auto;
@@ -448,6 +476,9 @@ nav {
     grid-area: intro;
     background-color: white;
     font-size: 20px;
+    text-align: center;
+    padding-bottom: 6rem;
+    padding-top :7rem;
 }
 
 .empty-space1 {
@@ -468,10 +499,11 @@ nav {
 /*-------------------------------------- MEDIA QUERY2 --------------------------------------*/
 
 /*--Tablet--*/
-@media (min-width:768px) and (max-width:991px) {
+@media (min-width: 600px) and (max-width: 1023px) {
     .k-main-container {
-        grid-template-columns: repeat(3, 32vw);
+        grid-template-columns:repeat(3, 30%);
         grid-template-areas:
+            "pagename pagename pagename"
             "one one two"
             "one one three"
             "four five six";
@@ -498,11 +530,12 @@ nav {
 
 
 /*--Mobile--*/
-@media (max-width: 767px) {
+@media (max-width: 599px) {
     .k-main-container {
-        grid-template-columns: 100vw;
-        grid-template-rows: repeat(6, 32vh);
+        grid-template-columns: 98vw;
+        grid-template-rows: 5vh repeat(6, 28vh);
         grid-template-areas:
+            "pagename"
             "one"
             "two"
             "three"
@@ -513,7 +546,7 @@ nav {
 
     .grid-structure {
         grid-template-columns: 100vw;
-        grid-template-rows: 14.5vh auto 19vh;
+        grid-template-rows: 7.77vh auto 19vh;
         grid-template-areas: 
         "header"
         "main"
@@ -542,15 +575,19 @@ nav {
     .header-container nav {
         flex-direction: column;
         width: 80px;
-        height: 50px;
+        height: 7rem;
         background-image: url('img/icon-menu.svg');
         background-size: cover;
-        padding-top:100px;
+    }
+
+    .nav-item:nth-child(1){
+        margin-top:70px;
     }
 
     .header-container nav:hover .nav-item {
+        text-align: center;
         display:block;
-        background-color: rgba(122, 175, 255, 0.5);;
+        background-color: rgba(122, 175, 255, 0.5);
     }
  
 }
