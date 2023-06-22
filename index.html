@@ -10,28 +10,32 @@
 
 <body>
     <!-- MENU -->
-    <nav>
-        <section class="menu-container">
-            <img class="menu-icon" src="img/logo-menu.png" alt="This is an icon of our shop">
-            <a class="menu-button" href="index.html">HOME</a>
-            <a class="menu-button" href="pages/product.html">MENU</a>
-            <a class="menu-button" href="index.html">ABOUT US</a>
-            <a class="menu-button" href="index.html">CONTACT</a>
-        </section>
-    </nav>
+    <div class="grid-containerbox">
+        <header>
+            <div class="header-container">
+                <div class="logo"><img class="menu-icon" src="img/logo-menu.png" alt="This is an icon of our shop"></div>
+                <nav>
+                    <a class="nav-item menu1" href="index.html">HOME</a>
+                    <a class="nav-item menu2" href="pages/product.html">J-Product</a>
+                    <a class="nav-item menu3" href="pages/pages1.html">K-Product</a>
+                    <a class="nav-item menu4" href="pages/pages2.html">AboutUs</a>
+                </nav>
+            </div>
+        </header>
 
-    <!-- HOME MAIN -->
-    <main>
-        <!-- SHOP NAME -->
-        <section class="main-container-1">
-            <p class="shopname-sub">Korean & Japanese</p>
-            <h1 class="shopname">
-                <span class="shopname-1">East </span>
-                <span class="shopname-2">Meets </span>
-                <span class="shopname-3">Sweet </span>
-            </h1>
-            <img class="main-picture" src="img/topsweets.jpg" alt="This is a picture of three colorful macarons.">
-        </section>
+        <!-- HOME MAIN -->
+        <main>
+            <!-- SHOP NAME -->
+            <section class="main-item first-content">
+                <p class="shopname-sub">Korean & Japanese</p>
+                <h1 class="shopname">
+                    <span class="shopname-1">East </span>
+                    <span class="shopname-2">Meets </span>
+                    <span class="shopname-3">Sweet </span>
+                </h1>
+                <img class="main-picture" src="img/topsweets.jpg" alt="This is a picture of three colorful macarons.">
+            </section>
+
 
         <!-- INTRODUCTION OF PRODCUT -->
         <section class="main-container-2">
@@ -65,11 +69,10 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <section class="footer-container">
-            <p class="footer-shopname">East Meets Sweet</p>
-            <div class="footer-buttons">
+        <!-- FOOTER -->
+        <footer>
+            <p class="footer-shopname footer-item">East Meets Sweet</p>
+            <div class="footer-buttons footer-item">
                 <a class="footer-button" href="https://facebook.com">
                     <img class="footer-img" src="img/icon-facebook.svg" alt="This is a link-icon of facebook.">
                 </a>
@@ -80,12 +83,11 @@
                     <img class="footer-img" src="img/icon-twitter.svg" alt="This is a link-icon of twitter.">
                 </a>
             </div>
-            <div class="footer-shopinfo">
+            <div class="footer-shopinfo footer-item">
                 <p>600-000-0000</p>
                 <p>info@eastmeetssweet.com</p>
             </div>
-        </section>
-    </footer>
-
+        </footer>
+    </div>
 </body>
 </html>
