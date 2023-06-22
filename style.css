@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 * {
-    padding: 0;
+    margin:0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: 'Caveat', cursive;
 }
@@ -14,31 +15,27 @@ body {
     font-size: 1.6rem;
 }
 
-
-/*-------------------- INDEX --------------------*/
-.grid-containerbox {
+.grid-structure {
     display: grid;
-    grid-template-columns: 14.5vw 70vw 14.5vw;
+    grid-template-columns: 14.5vw 70vw 15.5vw;
     grid-template-rows: 14.5vh auto 14.5vh;
     grid-template-areas: 
     "header header header"
     "  .     main     .  "
     "footer footer footer";
 }
-/*-----------HEADER-----------*/
-.grid-containerbox header {
+
+/*-------------------------------------- INDEX --------------------------------------*/
+/*-------------------- Header --------------------*/
+.grid-structure header {
     grid-area: header;
     display: grid;
     grid-template-columns: 14.5vw 70vw 14.5vw;
     grid-template-areas: ". header-content .";
-
-
-/*---------------------- MENU ----------------------*/
-nav {
     background-color: rgb(122, 175, 255);
-    
 }
 
+/*--- menu ---*/
 .header-container {
     grid-area: header-content;
     display: flex;
@@ -46,7 +43,7 @@ nav {
     align-items: center;
 }
 
-.grid-containerbox nav {
+.grid-structure nav {
     display: flex;
     height: 20%;
 }
@@ -58,31 +55,13 @@ nav {
     color: black;
 }
 
-/*-----------MAIN-----------*/
-.grid-containerbox main {
+/*-------------------- Main --------------------*/
+.grid-structure main {
     grid-area: main;
     text-align: center;
 }
 
-.first-content {
-    height: 42%;
-    margin-bottom: 7px;
-}
-
-.second-content {
-    border-top: 0.5rem solid rgba(189, 238, 243, 0.479);
-    height: 25%;
-    margin-bottom: 7px;
-}
-
-.third-content {
-    border-top: 0.5rem solid rgba(189, 238, 243, 0.479);
-    height: 27%;
-}
-
-/*---------------------- HOME MAIN ----------------------*/
-
-/*- SHOP NAME -*/
+/*-- SHOP NAME --*/
 .main-container-1 {
     text-align: center;
     margin-top: 5rem;
@@ -113,7 +92,12 @@ nav {
     width: 40%;
 }
 
-/*- INTRODUCTION OF PRODCUT + ABOUTUS -*/
+/*--- INTRODUCTION OF PRODCUT + ABOUTUS ---*/
+.main-container-2 {
+    border-top: 0.5rem solid rgba(189, 238, 243, 0.479);
+    margin: 2rem 2rem 5rem 2rem;
+}
+
 .intro-name {
     font-size: 3rem;
     margin-bottom: 2rem;
@@ -134,7 +118,12 @@ nav {
     text-decoration: underline;
 }
 
-/*- INTRODUCTION OF PRODUCT -*/
+/*--- INTRODUCTION OF PRODUCT ---*/
+.main-container-3 {
+    border-top: 0.5rem solid rgba(189, 238, 243, 0.479);
+    margin: 2rem 2rem 5rem 2rem;
+}
+
 .intro-product {
     display: flex;
     justify-content: space-around;
@@ -145,7 +134,7 @@ nav {
 }
 
 
-/*- INTRODUCTION OF ABOUTUS -*/
+/*--- INTRODUCTION OF ABOUTUS ---*/
 .intro-aboutus {
     margin: 2rem;
     overflow: hidden;
@@ -162,8 +151,8 @@ nav {
     font-size: 2rem;
 }
 
-/*-----------FOOTER-----------*/
-.grid-containerbox footer {
+/*-------------------- Footer --------------------*/
+.grid-structure footer {
     grid-area: footer;
     display:flex;
     justify-content: center;
@@ -172,7 +161,7 @@ nav {
     background-color: rgb(122, 175, 255);
 }
 
-.grid-containerbox .footer-item {
+.grid-structure .footer-item {
     margin-left: 10px;
 }
 
@@ -193,7 +182,7 @@ nav {
     width: 20%;
 }
 
-/*-------------------- PRODUCT --------------------*/
+/*-------------------------------------- PRODUCT --------------------------------------*/
 
 .product-title {
     font-size: 4rem;
@@ -254,35 +243,7 @@ nav {
     margin-bottom: 1rem;
     font-size: 2rem;
 }
-
-
-/*---------------------- FOOTER ----------------------*/
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
-    background-color: rgb(122, 175, 255);
-    gap: 1.5rem;
-}
-
-.footer-shopname {
-    font-weight: bold;
-}
-
-.footer-buttons,
-.footer-shopinfo {
-    text-align: center;
-}
-
-.footer-button {
-    text-decoration: none;
-}
-
-.footer-img {
-    width: 20%;
-}
-
+/*-------------------------------------- MEDIA QUERY 1 --------------------------------------*/
 /*---------------------- DESKTOP ----------------------*/
 @media screen and (min-width: 1024px) {
 
@@ -366,8 +327,8 @@ nav {
     }
 }
 
-/*---------------------- PAGE1 ----------------------*/
-.grid-container {
+/*-------------------------------------- K-PRODUCT --------------------------------------*/
+.k-main-container {
     display: grid;
     grid-template-columns: repeat(4, 24.3vw);
     grid-template-rows: repeat(3, 32vh);
@@ -381,7 +342,9 @@ nav {
 }
 
 .grid-item {
-    border: 4px solid bisque;
+    height: auto;
+    box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+    padding-bottom: 15px;
 }
 
 .grid-item:nth-child(1) {
@@ -420,16 +383,15 @@ nav {
     height: 70%;
 }
 
-/*-------------------- PAGE2 --------------------*/
-
+/*-------------------------------------- ABOUT US --------------------------------------*/
 .about-main {
     display: grid;
     grid-template-columns: 27% 46% 27%;
-    grid-template-rows: 15vh 15vh 25vh 35vh;
+    grid-template-rows: 15vh 15vh 25vh auto;
     grid-template-areas: 
     ". letter ."
     ". picture ."
-    "empty picture ."
+    "empty1 picture empty2"
     "intro intro intro";
     background-color: rgba(122, 175, 255,0.5);
 }
@@ -448,17 +410,29 @@ nav {
 .third-about {
     grid-area: intro;
     background-color: white;
+    font-size: 20px;
 }
 
-.empty-space {
-    grid-area: empty;
+.empty-space1 {
+    grid-area: empty1;
     background-color: white;
 }
-/*---- MEDIA QUERY ----*/
+
+.empty-space2 {
+    grid-area: empty2;
+    background-color: white;
+}
+
+.about-picture {
+    width:100%;
+    height: 100%;
+}
+
+/*-------------------------------------- MEDIA QUERY2 --------------------------------------*/
 
 /*--Tablet--*/
-@media all and (min-width:768px) and (max-width:991px) {
-    .grid-container {
+@media (min-width:768px) and (max-width:991px) {
+    .k-main-container {
         grid-template-columns: repeat(3, 32vw);
         grid-template-areas:
             "one one two"
@@ -467,16 +441,16 @@ nav {
     }
 
 
-    .grid-containerbox {
-        grid-template-columns: 99vw;
+    .grid-structure {
+        grid-template-columns: 100vw;
         grid-template-areas: 
         "header"
         "main"
         "footer";
     }
 
-    .grid-containerbox header {
-        grid-template-columns: 99vw;
+    .grid-structure header {
+        grid-template-columns: 100vw;
         grid-template-areas: "header-content";
     }
 
@@ -488,8 +462,8 @@ nav {
 
 /*--Mobile--*/
 @media (max-width: 767px) {
-    .grid-container {
-        grid-template-columns: 99vw;
+    .k-main-container {
+        grid-template-columns: 100vw;
         grid-template-rows: repeat(6, 32vh);
         grid-template-areas:
             "one"
@@ -500,8 +474,8 @@ nav {
             "six";
     }
 
-    .grid-containerbox {
-        grid-template-columns: 99vw;
+    .grid-structure {
+        grid-template-columns: 100vw;
         grid-template-rows: 14.5vh auto 19vh;
         grid-template-areas: 
         "header"
@@ -509,22 +483,18 @@ nav {
         "footer";
     }
 
-    .grid-containerbox header {
-        grid-template-columns: 99vw;
+    .grid-structure header {
+        grid-template-columns: 100vw;
         grid-template-areas: "header-content";
     }
 
-    .header-container {
-        padding:10px;
-    }
-
-    .grid-containerbox footer {
+    .grid-structure footer {
         margin-top: 20px;
         flex-direction: column;
         justify-content: flex-end;
     }
     
-    .grid-containerbox .footer-item {
+    .grid-structure .footer-item {
         margin: 0px auto;
     }
 
