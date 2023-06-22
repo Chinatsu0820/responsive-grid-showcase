@@ -14,4 +14,3 @@ Each team member must work on two pages, and one must be a Grid page.
   Soobeom  : page1.html, page2.html(Grid)
 
 Use git to coordinate our collaboration on the website by creating branches for each page and/or feature/component, and merging them into the main branch.
-
